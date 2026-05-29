@@ -21,6 +21,7 @@ const GitHubIcon = () => (
 
 const navItems = [
   { id: 'about', label: 'About me' },
+  { id: 'achievements', label: 'Achievements' },
   { id: 'degree', label: 'Degree' },
   { id: 'contact', label: 'Contact' },
 ];
@@ -36,7 +37,7 @@ export default function Sidebar({ data, activeSection, setActiveSection }) {
       <div className="sidebar-top">
         <p className="sidebar-greeting">Hi, I'm</p>
         <h1 className="sidebar-name">{data.name}!</h1>
-        <p className="sidebar-role">{data.title}</p>
+        <p className="sidebar-role">{data.title || 'BSIT Student | Aspiring Web Developer'}</p>
         <p className="sidebar-tagline">{data.tagline}</p>
 
         <nav className="sidebar-nav">

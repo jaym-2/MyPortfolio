@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Sidebar from './components/Sidebar';
 import About from './components/About';
+import Achievements from './components/Achievements';
 import Degree from './components/Degree';
 import Contact from './components/Contact';
 
@@ -22,7 +23,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about', 'degree', 'contact'];
+      const sections = ['about', 'achievements', 'degree', 'contact'];
       for (const id of sections) {
         const el = document.getElementById(id);
         if (el) {
@@ -51,6 +52,7 @@ function App() {
       <Sidebar data={data} activeSection={activeSection} setActiveSection={setActiveSection} />
       <main className="main-content">
         <section id="about"><About data={data} /></section>
+        <section id="achievements"><Achievements data={data} /></section>
         <section id="degree"><Degree data={data} /></section>
         <section id="contact"><Contact data={data} /></section>
       </main>
